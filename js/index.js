@@ -54,19 +54,10 @@ window.addEventListener('beforeprint', (event) => {
 //Navigation default
 
 const allAnchors = document.querySelectorAll('a')
-allAnchors[0].addEventListener('click', (event) => {
-    console.log('Prevented default')
-    event.preventDefault();
-})
-allAnchors[1].addEventListener('click', (event) => {
-    console.log('Prevented default')
-    event.preventDefault();
-})
-allAnchors[2].addEventListener('click', (event) => {
-    console.log('Prevented default')
-    event.preventDefault();
-})
-allAnchors[3].addEventListener('click', (event) => {
-    console.log('Prevented default')
-    event.preventDefault();
+
+allAnchors.forEach((item) => {
+    item.addEventListener('click', (event) => {
+        console.log('Prevented default')
+        event.preventDefault();
+    })
 })
